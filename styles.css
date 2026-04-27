@@ -97,6 +97,22 @@ a {
   height: 3px;
   background: var(--gold);
   box-shadow: 0 0 12px rgba(212, 154, 42, 0.82);
+  transition: transform 180ms ease;
+}
+
+.brand:hover .mark-scan::after {
+  animation: markLineScan 1.6s infinite ease-in-out;
+}
+
+@keyframes markLineScan {
+  0%,
+  100% {
+    transform: translateY(-3px);
+  }
+
+  50% {
+    transform: translateY(3px);
+  }
 }
 
 .nav a {
@@ -225,8 +241,10 @@ h3 {
 
 .plain-offer,
 .hook-definition {
+  position: relative;
   max-width: 760px;
   margin: 18px 0 0;
+  overflow: hidden;
   border-left: 5px solid var(--gold);
   background: rgba(255, 253, 250, 0.74);
   color: var(--green-2);
@@ -236,8 +254,40 @@ h3 {
   line-height: 1.45;
 }
 
+.plain-offer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 5px;
+  height: 24px;
+  background: var(--green);
+  box-shadow: 0 0 14px rgba(13, 95, 79, 0.42);
+  opacity: 0.72;
+  animation: calloutGutterScan 3.8s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes calloutGutterScan {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(calc(100% + 18px));
+  }
+}
+
 .hook-definition {
   margin-bottom: 18px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand:hover .mark-scan::after,
+  .plain-offer::after {
+    animation: none;
+  }
 }
 
 .hero-actions,
