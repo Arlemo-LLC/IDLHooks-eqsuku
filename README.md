@@ -1,4 +1,4 @@
-# Internet Defense Lab Hook Review
+# Internet Self-Defense Lab Hook Review
 
 Hooks-only public review page for feedback on the opening angle.
 

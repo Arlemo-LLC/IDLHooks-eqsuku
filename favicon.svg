@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Internet Self-Defense Lab mark">
+  <rect width="64" height="64" rx="10" fill="#161616"/>
+  <path d="M18 20v-6h12M46 20v-6H34M18 44v6h12M46 44v6H34" fill="none" stroke="#fffdfa" stroke-width="4" stroke-linecap="square"/>
+  <path d="M16 32h32" stroke="#d49a2a" stroke-width="5" stroke-linecap="square"/>
+  <circle cx="48" cy="32" r="4" fill="#0d5f4f"/>
+</svg>
